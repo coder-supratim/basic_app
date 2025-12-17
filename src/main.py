@@ -11,7 +11,30 @@ def main():
     unique_providers = {name for name in ai_provider}
     print("Unique AI Providers:", unique_providers)
     dictioanary_comprehension_example()
-    generate_comprehension_example()
+    generator_comprehension_example()
+    print("AI Provider Names from Generator:")
+    for name in generators_example():
+        print(name)
+    print("------------------------------------")
+
+    # Infinite generator example (printing first 10 numbers)
+    print("First 10 numbers from Infinite Generator:")
+    for i, num in enumerate(infinite_generator()):
+        if i >= 10:
+            break
+        print(num)
+    print("------------------------------------")
+    
+    countdownoffive = infinite_generator()
+    for _ in range(5):
+        print(next(countdownoffive))
+    print("------------------------------------")
+
+    countdownofthree = infinite_generator()
+    for _ in range(3):
+        print(next(countdownofthree))  
+    
+
 
 def dictioanary_comprehension_example():
     ai_provider = {"openai": 800, "azure": 230, "anthropic": 588, "cohere": 67, "ai21": 570}
@@ -20,13 +43,24 @@ def dictioanary_comprehension_example():
     high_value_providers = {name: value  / 30 for name, value in ai_provider.items() if value > 300}
     print("High Value AI Providers:", high_value_providers)
 
-def generate_comprehension_example():
+def generator_comprehension_example():
     # Function to calculate total number of providers with value greater than 300
     ai_provider = {"openai": 800, "azure": 230, "anthropic": 588, "cohere": 67, "ai21": 570}
     total_provides = sum(value for value, value in ai_provider.items() if value > 300)
     print("Total High Value Providers:", total_provides)
     pass
 
+def generators_example():
+    # Simple generator function to yield AI provider names
+    ai_provider = {"openai": 800, "azure": 230, "anthropic": 588, "cohere": 67, "ai21": 570}
+    for name in ai_provider:
+        yield name
 
+def infinite_generator():
+    # Infinite generator example
+    num = 0
+    while True:
+        yield f"count {num}"
+        num += 1
 if __name__ == "__main__":
     main()
