@@ -30,5 +30,5 @@ def find_first_non_repeating_char(s: str) -> str:
 	return '$'
 
 
-s = find_first_non_repeating_char("Racecar")
-print(s)
+
+print(find_first_non_repeating_char("Racecar"))
