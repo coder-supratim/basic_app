@@ -31,4 +31,6 @@ def find_first_non_repeating_char(s: str) -> str:
 
 
 
-print(find_first_non_repeating_char("Racecar"))
+print(find_first_non_repeating_char("aabbccc"))  # Output: '$'
+print(find_first_non_repeating_char("geeksForgeeks"))  # Output: 'f
+print(find_first_non_repeating_char("Racecar"))  # Output: 'e'
