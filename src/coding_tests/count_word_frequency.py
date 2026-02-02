@@ -1,6 +1,6 @@
 def findWordFrequency (text) :
 	words = text.lower().split()
-	freq = {}
+	freq = dict()
 	
 	for word in words:
 		if word in freq:
