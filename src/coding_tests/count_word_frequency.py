@@ -18,5 +18,5 @@ def shortWordFrequency(text):
 	for word in words:
 		freq[word] = freq.get(word,0) +1 
 	return freq
-print(shortWordFrequency("The quick brown fox jumps over the lazy dog"))
+print(shortWordFrequency("The gpt is a powerful language model that can generate human-like text. The gpt is widely used in natural language processing tasks."))
 print(findWordFrequency("The quick brown fox jumps over the lazy dog"))
